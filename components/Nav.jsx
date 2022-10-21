@@ -1,4 +1,6 @@
 import React from 'react';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { Link } from 'react-router-dom';
 import  logo  from '../assets/Logo.png'
 
 const Nav = () => {
@@ -7,29 +9,29 @@ const Nav = () => {
             <div className="nav__container">
                 <ul className="nav__links">
                     <li className="nav__list">
-                        <a href="/" className="nav__link link--hover--effect">
+                        <Link to="/" className="nav__link link--hover--effect">
                             Home
-                        </a>
+                        </Link>
                     </li>
                     <li className="nav__list">
-                        <a href="https://twitter.com/DragonBallToki" className="nav__link link--hover--effect">
+                        <a href="https://twitter.com/DragonBallToki" className="nav__link link--hover--effect" target="_blank">
                             Twitter
                         </a>
                     </li>
                     <li className="">
                         <figure className="nav__logo--container">
-                            <img src={logo} alt="" />
+                            <LazyLoadImage src={logo} alt="" loading='lazy'/>
                         </figure>
                     </li>
                     <li className="nav__list">
-                        <a href="/read" className="nav__link link--hover--effect">
+                        <Link to="/read" className="nav__link link--hover--effect">
                             Read
-                        </a>
+                        </Link>
                     </li>
                     <li className="nav__list">
-                        <a href="/about" className="nav__link link--hover--effect">
+                        <Link to="/about" className="nav__link link--hover--effect">
                             About
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>

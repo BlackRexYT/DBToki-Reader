@@ -1,4 +1,6 @@
 import React from 'react';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
+import { Link } from 'react-router-dom';
 import logo from '../assets/LogoFooter.png'
 
 const Footer = () => {
@@ -6,16 +8,16 @@ const Footer = () => {
         <footer>
             <div className="container">
                 <div className="row row__column">
-                    <a href="/">
+                    <Link to="/">
                         <figure className="footer__logo">
-                            <img src={logo} alt="" className="footer__logo--img" />
+                            <img src={logo} alt="" className="footer__logo--img" loading='lazy' />
                         </figure>
-                    </a>
+                    </Link>
                     <div className="footer__list">
-                        <a href="/" className="footer__link">Home</a>
-                        <a href="https://twitter.com/DragonBallToki" className="footer__link">Twitter</a>
-                        <a href="/read" className="footer__link">Read</a>
-                        <a href="/about" className="footer__link">About</a>
+                        <Link to="/" className="footer__link">Home</Link>
+                        <a href="https://twitter.com/DragonBallToki" className="footer__link" target="_blank">Twitter</a>
+                        <Link to="/read" className="footer__link">Read</Link>
+                        <Link to="/about" className="footer__link">About</Link>
                     </div>
                 </div>
             </div>

@@ -1,11 +1,15 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
 
-const Members = ({ icon, name, bio, role }) => {
+const Members = ({ icon, name, bio, role, link }) => {
     return (
             <div className="member__card">
                 <div className="member__icon">
                     <figure className="member__icon--img-wrapper">
-                        <img src={icon} alt="" className="member__icon--img" />
+                        <a href={link} target='_blank'>
+                            <img src={icon} alt="" className="member__icon--img" />
+                        </a>
                     </figure>
                 </div>
                 <div className="member__title">
@@ -16,6 +20,11 @@ const Members = ({ icon, name, bio, role }) => {
                 </div>
                 <div className="member__bio">
                     <p>{bio}</p>
+                </div>
+                <div className="member__social">
+                    <a href={link} target="_blank" className="member__social btn2">
+                        <FontAwesomeIcon icon={['fab','twitter']} />
+                    </a>
                 </div>
             </div>
     );
