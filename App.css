@@ -263,7 +263,13 @@ footer {
   align-items: center;
   margin: 0 auto;
   width:200px;
-  border-radius: 9999px;
+  border-radius: 80px;
+  background: rgba(47, 182, 255, 0);
+  transition: all 400ms ease;
+}
+.member__icon--img:hover{
+  border-radius:99px;
+  scale: 1.05;
 }
 .member__social{
   margin: 0 auto;
@@ -271,7 +277,6 @@ footer {
   color:white;
   text-decoration: none;
 }
-
 
 /* about*/
 

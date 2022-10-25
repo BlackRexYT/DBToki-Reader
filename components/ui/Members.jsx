@@ -21,7 +21,7 @@ const Members = ({ icon, name, bio, role, link }) => {
                 <div className="member__bio">
                     <p>{bio}</p>
                 </div>
-                <div className="member__social">
+                <div className="member__social btn2">
                     <a href={link} target="_blank" className="member__social btn2">
                         <FontAwesomeIcon icon={['fab','twitter']} />
                     </a>
